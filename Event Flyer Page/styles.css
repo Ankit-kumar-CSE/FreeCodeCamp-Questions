@@ -1,0 +1,45 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 60vw;
+    min-height:calc(100vh - 100px);
+}
+hr{
+    height: 1px;
+    color: black;
+    background-color: black;
+    border-color: black;
+    width: 50%;
+    margin: 20px;
+}
+img{
+    padding: 20px;
+}
+h1{
+    padding:20px;
+}
+p{
+    padding: 5px;
+}
+main{
+    display: flex;
+}
+section{
+    margin: 20px;
+    width: 50%;
+}
+h2{
+    padding: 15px;
+}
