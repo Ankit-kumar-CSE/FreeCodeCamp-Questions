@@ -1,0 +1,36 @@
+body{
+    background-color: #f4f4f4;
+}
+.color-grid{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+.color1{
+    width: 100px;
+    height: 100px;
+    background-color: #FF0000;
+}
+.color2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(4, 124, 245);
+}
+.color3{
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+}
+.color4{
+    width: 100px;
+    height: 100px;
+    background-color: hsl(183, 100%, 50%);
+}
+.color5{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(115, 255, 0);
+}
