@@ -1,0 +1,83 @@
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d7bfd5;
+    font-family: system-ui, Arial, sans-serif;
+}
+
+/* REQUIRED */
+#playing-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+/* REQUIRED */
+.card {
+    width: 260px;
+    height: 360px;
+    background: white;
+    border: 2px solid #222;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 10px 18px rgba(0,0,0,0.15);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/* REQUIRED */
+.left {
+    align-self: flex-start;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* REQUIRED */
+.middle {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    font-size: 72px;
+    line-height: 1;
+    text-align: center;
+}
+
+/* REQUIRED */
+.right {
+    align-self: flex-end;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+    transform: rotate(180deg);
+}
+
+/* extra styling */
+.red { color: #e00000; }
+.black { color: #111; }
+.small-suit {
+    font-size: 28px;
+    font-weight: 400;
+    display: block;
+    margin-top: 8px;
+}
+
+/* Make the 4♣ look like 2 on top + 2 on bottom */
+.middle.four {
+    gap: 70px;
+}
+
+.row {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+}
