@@ -1,0 +1,169 @@
+/* ========== RESET ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== PAGE ========== */
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f3fbff;
+  color: #0b2032;
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 18px;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 900;
+  margin-bottom: 22px;
+}
+
+/* ========== TABLE ========== */
+.table-shell {
+  border-radius: 14px;
+  overflow: auto;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 12px 28px rgba(10, 35, 55, 0.12);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 880px;
+}
+
+thead th {
+  text-align: left;
+  padding: 16px 18px;
+  font-weight: 800;
+  background-image: linear-gradient(180deg, #c9efff, #87d9ff);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  color: #05314d;
+}
+
+tbody td {
+  padding: 18px;
+  font-size: 18px;
+}
+
+tbody tr + tr td {
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+/* ============================================================
+   ✅ TESTS 19–24
+   MUST USE ATTRIBUTE SELECTORS on rows:
+   tr[class="read"], tr[class="to-read"], tr[class="in-progress"]
+   AND set background-image
+   ============================================================ */
+
+tr[class="read"] {
+  background-image: linear-gradient(90deg, #baffc1, #8cff9d);
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(90deg, #eef3ee, #dfe7df);
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(90deg, #ffe3b3, #ffd18b);
+}
+
+/* ============================================================
+   ✅ TEST 25
+   span display inline-block
+   ============================================================ */
+span {
+  display: inline-block;
+}
+
+/* ============================================================
+   ✅ TESTS 26–34
+   MUST USE attribute selectors for tr AND target span.status
+   and set BOTH border and background-image
+   Safer to also use span[class="status"]
+   ============================================================ */
+
+tr[class="to-read"] span[class="status"] {
+  border: 2px solid rgba(140, 0, 0, 0.35);
+  background-image: linear-gradient(180deg, #ff7676, #d70000);
+  color: #1b0000;
+}
+
+tr[class="read"] span[class="status"] {
+  border: 2px solid rgba(0, 80, 0, 0.32);
+  background-image: linear-gradient(180deg, #7bff7b, #16b216);
+  color: #002000;
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 2px solid rgba(130, 85, 0, 0.35);
+  background-image: linear-gradient(180deg, #ffd56d, #e79b00);
+  color: #2b1a00;
+}
+
+/* status pill look */
+span.status {
+  min-width: 140px;
+  text-align: center;
+  border-radius: 999px;
+  font-weight: 900;
+  padding: 6px 18px;
+  height: 38px;
+}
+
+/* ============================================================
+   ✅ TESTS 35–38
+   attribute selector targets status AND rate-starting class
+   and sets height/width/padding
+   ============================================================ */
+span[class="status"],
+span[class^="rate"] {
+  height: 38px;
+  width: auto;
+  padding: 6px 18px;
+}
+
+/* ============================================================
+   ✅ TESTS 39–45
+   direct children of rate-starting spans
+   set border, border-radius, margin, height, width, background-color
+   ============================================================ */
+span[class^="rate"] {
+  padding: 0;
+  height: auto;
+  width: auto;
+}
+
+span[class^="rate"] > span {
+  border: 2px solid rgba(60, 60, 60, 0.65);
+  border-radius: 50%;
+  margin: 0 5px;
+  height: 20px;
+  width: 20px;
+  background-color: #f5f5f5;
+}
+
+/* ============================================================
+   ✅ TESTS 46–51
+   rate fill for one/two/three using attribute selectors
+   background-image linear-gradient
+   ============================================================ */
+
+span[class~="one"] > span:first-child {
+  background-image: linear-gradient(180deg, #ffe98a, #ffb400);
+}
+
+span[class~="two"] > span:nth-child(-n + 2) {
+  background-image: linear-gradient(180deg, #ffe98a, #ffb400);
+}
+
+span[class~="three"] > span {
+  background-image: linear-gradient(180deg, #ffe98a, #ffb400);
+}
